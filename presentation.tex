@@ -1,0 +1,83 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{xcolor}
+
+% Customization based on Tony Morris's presentations:
+% https://github.com/tonymorris/
+\usetheme{Warsaw}
+\usecolortheme{whale}
+\setbeamercovered{transparent}
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+
+\xdefinecolor{darkgreen}{rgb}{0,0.35,0}
+\lstset{
+  tabsize=2,
+  basicstyle=\ttfamily,
+  moredelim=**[is][\btHL]{`}{`}
+}
+\lstdefinestyle{language}{
+  language=java,
+  basicstyle=\footnotesize\ttfamily,
+  stringstyle=\color{darkgreen}\ttfamily,
+  commentstyle=\color{gray}\ttfamily,
+  keywordstyle=\footnotesize\color{blue}\ttfamily,
+  tabsize=2,
+  moredelim=**[is][\btHL]{`}{`},
+  showstringspaces=false
+}
+\DeclareFontShape{OT1}{cmtt}{bx}{n}{<5><6><7><8><9><10><10.95><12><14.4><17.28><20.74><24.88>cmttb10}{}
+
+\author{Ricky Elrod}
+
+\begin{document}
+\title{\large Presentation Title}
+\subtitle{Subtitle}
+\institute{Youngstown State University}
+\tiny{\date
+
+}
+\normalsize
+
+\setbeamercovered{transparent}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Slide Title}
+  \framesubtitle{And a subtitle.}
+  \begin{block}{Hi there}
+    \begin{itemize}
+      \item Boom!
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Attribution}
+  \begin{block}{Thank you to...}
+    \begin{itemize}
+      \item Person One
+      \item \ldots something they did
+      \item \ldots something else
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Contact}
+  ricky@elrod.me, @relrod6 on Twitter, ``relrod'' on Freenode IRC. Let's talk!
+\end{frame}
+
+\end{document}

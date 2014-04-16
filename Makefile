@@ -1,5 +1,8 @@
-html:
-	pandoc -s --mathml -i -t revealjs -c include.css -c reveal.js/css/theme/simple.css SLIDES.md -o presentation.html
+latex:
+	latexmk -output-directory=out -aux-directory=out -pdf
+
+open:
+	xdg-open out/*.pdf
 
 clean:
-	rm -rf presentation.html
+	rm -rf out

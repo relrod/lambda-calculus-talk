@@ -3,9 +3,8 @@
 This is just the template/boilerplate I've been using for constructing
 presentations.
 
-It requires `pandoc` and `make` to use effectively.
-
-At some point, I'll probably be adding themes and such.
+It requires `mklatex` and `make` to use effectively, along with a number of
+texlive-\* packages (in Fedora) for proper LaTeX rendering.
 
 # License
 
