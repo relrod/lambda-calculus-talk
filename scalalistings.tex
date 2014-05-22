@@ -1,0 +1,61 @@
+\lstdefinelanguage{scala}{
+  morekeywords={
+    abstract
+  , case
+  , catch
+  , class
+  , copy
+  , def
+  , do
+  , else
+  , extends
+  , false
+  , final
+  , finally
+  , for
+  , if
+  , implicit
+  , import
+  , match
+  , mixin
+  , new
+  , null
+  , object
+  , override
+  , package
+  , private
+  , protected
+  , requires
+  , return
+  , sealed
+  , super
+  , this
+  , throw
+  , trait
+  , true
+  , try
+  , type
+  , val
+  , var
+  , while
+  , with
+  , yield
+  }
+, sensitive=true
+, morecomment=[l]{//}
+, morecomment=[n]{/*}{*/}
+, morestring=[b]"
+, morestring=[b]'
+, morestring=[b]"""
+}
+
+% set font with bold
+\renewcommand{\ttdefault}{pcr}
+
+\lstset{
+  language=Scala
+, tabsize=2
+, basicstyle=\ttfamily
+, keywordstyle=\color{darkgray}\bfseries
+, breaklines=true
+}

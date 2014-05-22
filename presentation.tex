@@ -6,10 +6,10 @@
 \usepackage{ulem}
 \usepackage{xcolor}
 
-% Customization based on Tony Morris's presentations:
-% https://github.com/tonymorris/
-\usetheme{Warsaw}
-\usecolortheme{whale}
+\input{scalalistings}
+
+\usetheme{RBE}
+\usecolortheme{RBE}
 \setbeamercovered{transparent}
 \setbeamertemplate{headline}{
   \begin{beamercolorbox}{section in head/foot}
@@ -27,7 +27,7 @@
   moredelim=**[is][\btHL]{`}{`}
 }
 \lstdefinestyle{language}{
-  language=java,
+  language=scala,
   basicstyle=\footnotesize\ttfamily,
   stringstyle=\color{darkgreen}\ttfamily,
   commentstyle=\color{gray}\ttfamily,
@@ -41,9 +41,9 @@
 \author{Ricky Elrod}
 
 \begin{document}
-\title{\large Presentation Title}
-\subtitle{Subtitle}
-\institute{Youngstown State University}
+\title{Title goes here}
+\subtitle{And a subtitle}
+\institute{Relevant Institution}
 \tiny{\date
 
 }
@@ -55,13 +55,28 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Slide Title}
-  \framesubtitle{And a subtitle.}
-  \begin{block}{Hi there}
+  \frametitle{First off...}
+  \framesubtitle{Hi there!}
+  \begin{itemize}
+  \item I am a ...
     \begin{itemize}
-      \item Boom!
+      \item Strong interest in provable software correctness.
+      \item Student at Youngstown State University
+      \item YSU ACM Student Chapter Vice President
+      \item haskell.org infrastructure volunteer
+      \item Emacs user
+      \item Dog owner
+      \item Pepsi drinker
     \end{itemize}
-  \end{block}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{First off...}
+  \framesubtitle{About this talk...}
+  \begin{itemize}
+    \item ...
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]

@@ -1,0 +1,34 @@
+\ProvidesPackage{beamerthemeRBE}
+  [2014/05/21 v1.0 beamer RBE theme]
+
+\mode<presentation>
+
+\usefonttheme{default}
+\usecolortheme{UEA}
+\useinnertheme{default}
+\useoutertheme{default}
+
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{date}{size=\tiny}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{example text}{series=\bfseries}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{framesubtitle}{series=\mdseries,size=\large}
+\setbeamerfont{section}{series=\bfseries}
+\setbeamerfont{subtitle}{series=\bfseries,size=\large}
+\setbeamerfont{title}{series=\bfseries,size=\Large}
+
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{itemize items}{}
+
+\defbeamertemplate*{title page}{customized}[1][]{
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \vspace{50mm}
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate\par
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+
+\mode<all>
