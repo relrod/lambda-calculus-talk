@@ -3,7 +3,13 @@
 
 \mode<presentation>
 
-\usefonttheme{default}
+\usepackage{fancybox}
+\usepackage{mdframed}
+\usepackage{thmtools}
+
+\usepackage[default]{opensans}
+\setbeamerfont{note page}{family*=pplx,size=\footnotesize} % Palatino for notes
+
 \usecolortheme{RBE}
 \useinnertheme{default}
 \useoutertheme{default}
@@ -13,12 +19,13 @@
 \setbeamerfont{institute}{size=\small}
 \setbeamerfont{example text}{series=\bfseries}
 \setbeamerfont{frametitle}{series=\bfseries,size=\large}
-\setbeamerfont{framesubtitle}{series=\mdseries,size=\large}
+\setbeamerfont{framesubtitle}{shape=\it}
 \setbeamerfont{section}{series=\bfseries}
-\setbeamerfont{subtitle}{series=\bfseries,size=\large}
 \setbeamerfont{title}{series=\bfseries,size=\Large}
+\setbeamerfont{serif}{family=\rmfamily,size=\Large}
 
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
 %\setbeamertemplate{itemize items}{}
 
 \defbeamertemplate*{title page}{customized}[1][]{
@@ -30,5 +37,48 @@
   \usebeamerfont{date}\insertdate\par
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
 }
+
+
+\setbeamertemplate{frametitle}{
+  \insertframetitle\par
+  \usebeamerfont{framesubtitle}\insertframesubtitle\par
+  \color{midnight}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{1pt}}}
+}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}
+}
+
+\setbeamercolor{title}{fg=midnight}
+\setbeamercolor{frametitle}{fg=midnight}
+\setbeamercolor{normal text}{fg=midnight}
+\setbeamercolor{itemize item}{fg=midnight}
+\setbeamercolor{enumerate item}{fg=midnight}
+
+\declaretheoremstyle[
+  headfont=\bfseries,
+  notebraces={[}{]},
+  bodyfont=\rm\itshape,
+  postheadspace=\newline,
+  postheadhook={\textcolor{midnight}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+  spacebelow=\parsep,
+  spaceabove=\parsep,
+  mdframed={
+    backgroundcolor=white!20,
+    innertopmargin=6pt,
+    roundcorner=5pt,
+    innerbottommargin=6pt,
+    skipabove=\parsep,
+    skipbelow=\parsep }
+]{myexamplestyle}
+
+\declaretheorem[
+    style=myexamplestyle,
+    name=Definition
+]{definitionserif2}
 
 \mode<all>
