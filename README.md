@@ -1,11 +1,9 @@
-# presentation-template
+# lambda-calculus-talk
 
-This is just the template/boilerplate I've been using for constructing
-presentations.
-
-It requires `mklatex` and `make` to use effectively, along with a number of
-texlive-\* packages (in Fedora) for proper LaTeX rendering.
+This is a talk I'll be giving to the YSU ACM about what Lambda Calculus is, why
+we care, some common extensions we see to it, some programming languages based
+on it, and where it all came from.
 
 # License
 
-CC0/public domain unless otherwise noted in a file's header.
+CC-BY-SA
